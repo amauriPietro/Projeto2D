@@ -10,7 +10,8 @@ public class PlayerCtrl : MonoBehaviour {
 	public float feetHeight = 0.1f;
 	public bool isGrounded;
 	public LayerMask whatIsGround;
-	
+	public bool canDoubleJump = false;
+	public float delayForDoubleJump = 0.2f;
 
 	Rigidbody2D rb;
 	SpriteRenderer sr;
@@ -72,7 +73,18 @@ public class PlayerCtrl : MonoBehaviour {
 			isJumping = true;
 			rb.AddForce(new Vector2(0f, jumpSpeed));
 			anim.SetInteger("State", 1);
+
+			Invoke("EnableDoubleJump", delayForDoubleJump);
 		}
+		if(canDoubleJump && !isGrounded){
+			rb.velocity = Vector2.zero;
+			rb.AddForce(new Vector2(0f, jumpSpeed));
+			anim.SetInteger("State", 1);
+			canDoubleJump = false;
+		}
+	}
+	void EnableDoubleJump(){
+		canDoubleJump = true;
 	}
 	void OnCollisionEnter2D(Collision2D other){
 		if(other.gameObject.layer == LayerMask.NameToLayer("Ground")){
