@@ -74,6 +74,7 @@ public class PlayerCtrl : MonoBehaviour {
 	void jump(){
 		if(isGrounded){
 			isJumping = true;
+            AudioManager.instance.PlayJumpSound(gameObject);
 			rb.AddForce(new Vector2(0f, jumpSpeed));
 			anim.SetInteger("State", 1);
 
@@ -81,7 +82,8 @@ public class PlayerCtrl : MonoBehaviour {
 		}
 		if(canDoubleJump && !isGrounded){
 			rb.velocity = Vector2.zero;
-			rb.AddForce(new Vector2(0f, jumpSpeed));
+            AudioManager.instance.PlayJumpSound(gameObject);
+            rb.AddForce(new Vector2(0f, jumpSpeed));
 			anim.SetInteger("State", 1);
 			canDoubleJump = false;
 		}
@@ -98,6 +100,7 @@ public class PlayerCtrl : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("coin"))
         {
+            AudioManager.instance.PlayCoinPickupSound(other.gameObject);
             SFXManager.instance.ShowCoinParticle(other.gameObject);
             Destroy(other.gameObject);
         }
