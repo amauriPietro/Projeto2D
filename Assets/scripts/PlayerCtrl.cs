@@ -94,4 +94,11 @@ public class PlayerCtrl : MonoBehaviour {
 			isJumping = false;
 		}
 	}
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("coin"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
