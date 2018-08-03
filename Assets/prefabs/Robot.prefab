@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalSpeed: 5
-  jumpSpeed: 600
+  jumpSpeed: 500
   feetWidth: 0.5
   feetHeight: 0.1
   isGrounded: 0
