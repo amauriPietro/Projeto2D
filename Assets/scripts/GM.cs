@@ -35,6 +35,7 @@ public class GM : MonoBehaviour {
 				player = obj.GetComponent<PlayerCtrl>();
 			}
 		}
+		DisplayHudData();
 	}
     void DisplayHudData()
     {
