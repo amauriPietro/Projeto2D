@@ -54,11 +54,15 @@ public class GM : MonoBehaviour {
     void DisplayHudData()
     {
         ui.hud.txtCoinCount.text = "X " + data.coinCount;
+		ui.hud.txtHeartCount.text = "X " + data.heartCount;
 		ui.hud.txtTimer.text = "Timer: " + timeLeft.ToString("F1");
     }
     public void IncrementCoinCount(){
         data.coinCount++;
     }
+	public void DecrementHeartCount(){
+		data.heartCount--;
+	}
 	public void RespawnPlayer(){
 		Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
 
@@ -66,7 +70,8 @@ public class GM : MonoBehaviour {
 	public void KillPlayer(){
 		if(player != null){
 			Destroy(player.gameObject);
-			if(timeLeft >= 2.1){
+			DecrementHeartCount();
+			if(data.heartCount > 0 && timeLeft >= 2.1){
 				Invoke("RespawnPlayer", timeToResspawn);
 			}
 			else{

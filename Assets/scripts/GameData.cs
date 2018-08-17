@@ -7,5 +7,6 @@ using System;
 public class GameData {
 
     public int coinCount = 0;
+    public int heartCount = 3;
 
 }
