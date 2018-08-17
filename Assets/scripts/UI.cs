@@ -25,4 +25,13 @@ public class UI {
         public GameObject gameOverPanel;
     }
     public GameOver gameOver;
+    [Serializable]
+    public class LevelComplete {
+        [Header("Text")]
+        public Text txtCoinCount;
+        public Text txtTimer;
+        [Header("Others")]
+        public GameObject levelCompletePanel;
+    }
+    public LevelComplete levelComplete;
 }
