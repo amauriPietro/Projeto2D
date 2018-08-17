@@ -5048,6 +5048,12 @@ MonoBehaviour:
   playerPrefab: {fileID: 1353091807230096, guid: 639be4846ce0d074282199a314183b10,
     type: 2}
   timeToResspawn: 2
+  ui:
+    hud:
+      txtCoinCount: {fileID: 773700617}
+      txtHeartCount: {fileID: 450124644}
+      txtTimer: {fileID: 405696468}
+      hudPanel: {fileID: 266004968}
 --- !u!4 &1338550070
 Transform:
   m_ObjectHideFlags: 0

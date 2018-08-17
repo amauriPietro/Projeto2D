@@ -10,9 +10,10 @@ public class GM : MonoBehaviour {
 	public float yMinLive = -10f;
 	public Transform spawnPoint;
 	public GameObject playerPrefab;
-
 	PlayerCtrl player;
 	public float timeToResspawn = 2f;
+    public UI ui;
+    GameData data = new GameData();
 
 	void Awake(){
 		if(instance == null){
@@ -35,6 +36,13 @@ public class GM : MonoBehaviour {
 			}
 		}
 	}
+    void DisplayHudData()
+    {
+        ui.hud.txtCoinCount.text = "X " + data.coinCount;
+    }
+    public void IncrementCoinCount(){
+        data.coinCount++;
+    }
 	public void RespawnPlayer(){
 		Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
 

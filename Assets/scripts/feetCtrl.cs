@@ -10,14 +10,14 @@ public class feetCtrl : MonoBehaviour {
         player = transform.parent.gameObject;
 	}
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("MovingPlatform"))
         {
             player.transform.parent = other.transform.parent.transform;
         }
     }
-    private void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("MovingPlatform"))
         {
