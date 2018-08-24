@@ -3074,6 +3074,10 @@ Prefab:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1630696652316858, guid: 6642b4cd4f284d744b5cfeb19bf5e654, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6642b4cd4f284d744b5cfeb19bf5e654, type: 2}
   m_IsPrefabParent: 0
@@ -5465,6 +5469,7 @@ MonoBehaviour:
       txtCoinCount: {fileID: 1660914816}
       txtTimer: {fileID: 1523857280}
       levelCompletePanel: {fileID: 1387812971}
+  timeToKill: 1.5
 --- !u!4 &1338550070
 Transform:
   m_ObjectHideFlags: 0
@@ -6899,7 +6904,7 @@ GameObject:
   - component: {fileID: 1769467618}
   - component: {fileID: 1769467617}
   - component: {fileID: 1769467616}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
