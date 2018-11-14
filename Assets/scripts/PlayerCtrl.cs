@@ -36,7 +36,7 @@ public class PlayerCtrl : MonoBehaviour {
 		isGrounded = Physics2D.OverlapBox(new Vector2(feet.position.x, feet.position.y), new Vector2(feetWidth, feetHeight), 360f, whatIsGround);
 		float horizontalInput = Input.GetAxisRaw("Horizontal");
 		float horizontalPlayerSpeed = horizontalSpeed * horizontalInput;
-		if(horizontalPlayerSpeed != 0){
+		if(horizontalPlayerSpeed != 0){ 
 			MoveHorizontal(horizontalPlayerSpeed);
 		}
 		else{
@@ -113,6 +113,10 @@ public class PlayerCtrl : MonoBehaviour {
 			case "Finish":
 			GM.instance.LevelComplete();
 			break;
+            case "Checkpoint":
+                GameObject obj = GameObject.Find("SpawnPoint");
+                obj.transform.position = other.transform.position;
+                break;
 		}
     }
 }
