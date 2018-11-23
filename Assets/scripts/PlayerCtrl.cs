@@ -12,12 +12,16 @@ public class PlayerCtrl : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public bool canDoubleJump = false;
 	public float delayForDoubleJump = 0.2f;
+	public GameObject RightShootPrefab;
+	public GameObject LeftShootPrefab;
 
 	Rigidbody2D rb;
 	SpriteRenderer sr;
 	Animator anim;
 	bool isJumping = false;
 	public Transform feet;
+	public Transform RightShoot;
+	public Transform LeftShoot;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
@@ -45,9 +49,15 @@ public class PlayerCtrl : MonoBehaviour {
 		if(Input.GetButtonDown("Jump")){
 			jump();
 		}
+		if(Input.GetButtonDown("Fire1")){
+			shoot();
+		}
 		ShowFall();
 	}
 
+	void shoot(){
+		Instantiate(RightShootPrefab, RightShoot.position, Quaternion.identity);
+	}
 	void MoveHorizontal(float speed){
 		rb.velocity = new Vector2(speed, rb.velocity.y);
 		if(speed < 0f){
