@@ -12,6 +12,8 @@ public class PlayerCtrl : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public bool canDoubleJump = false;
 	public float delayForDoubleJump = 0.2f;
+	public float delayForShoot = 0.2f;
+	public float ShootTime = 0f;
 	public GameObject RightShootPrefab;
 	public GameObject LeftShootPrefab;
 
@@ -34,6 +36,9 @@ public class PlayerCtrl : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+		if(ShootTime < delayForShoot){
+			ShootTime += Time.deltaTime;
+		}
 		if(transform.position.y < GM.instance.yMinLive){
 			GM.instance.KillPlayer();
 		}
@@ -56,6 +61,10 @@ public class PlayerCtrl : MonoBehaviour {
 	}
 
 	void shoot(){
+		if(delayForShoot > ShootTime){
+			return;
+		}
+		ShootTime = 0f;
 		if(sr.flipX){
 			AudioManager.instance.PlayLaserSound(LeftShoot.gameObject);
 			Instantiate(LeftShootPrefab, LeftShoot.position, Quaternion.identity);
