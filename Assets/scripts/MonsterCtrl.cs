@@ -37,4 +37,9 @@ public class MonsterCtrl : MonoBehaviour {
 			 sr.flipX = false;
 		 }
 	}
+	void OnTriggerEnter2D(Collider2D other){
+		if(other.gameObject.tag == "laser"){
+			Destroy(this.gameObject);
+		}
+	}
 }

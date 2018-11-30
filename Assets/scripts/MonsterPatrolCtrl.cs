@@ -48,5 +48,10 @@ public class MonsterPatrolCtrl : MonoBehaviour
     {
         Gizmos.DrawLine(pos1.position, pos2.position);
     }
+    void OnTriggerEnter2D(Collider2D other){
+		if(other.gameObject.tag == "laser"){
+			Destroy(this.gameObject);
+		}
+	}
 
 }

@@ -9,6 +9,7 @@ TagManager:
   - coin
   - MovingPlatform
   - Checkpoint
+  - laser
   layers:
   - Default
   - TransparentFX
