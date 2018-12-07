@@ -4463,6 +4463,7 @@ MonoBehaviour:
     coinPickup: {fileID: 8300000, guid: ca00ccb70ce879d4d818721bab27fc59, type: 3}
     fail: {fileID: 8300000, guid: 010ab17a717339248aa1ee9b86995e0c, type: 3}
     laser: {fileID: 8300000, guid: 3d429d7d24440d74a874e07d351d2a0c, type: 3}
+    squish: {fileID: 8300000, guid: 97be40bd13c42f34bb5c3ac2fe402f11, type: 3}
   audioPlayer:
     jump: {fileID: 8300000, guid: 6b1bb466ef7baa34a816752817e57dc4, type: 3}
 --- !u!1 &990510866

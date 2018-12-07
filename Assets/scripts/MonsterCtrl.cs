@@ -40,6 +40,7 @@ public class MonsterCtrl : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.tag == "laser"){
 			SFXManager.instance.ShowKillParticle(transform.gameObject);
+			AudioManager.instance.PlaySquishSound(transform.gameObject);
 			Destroy(this.gameObject);
 		}
 	}
