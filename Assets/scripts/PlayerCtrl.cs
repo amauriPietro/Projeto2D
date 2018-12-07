@@ -65,6 +65,7 @@ public class PlayerCtrl : MonoBehaviour {
 			return;
 		}
 		ShootTime = 0f;
+		anim.Play("robot-shoot");
 		if(sr.flipX){
 			AudioManager.instance.PlayLaserSound(LeftShoot.gameObject);
 			Instantiate(LeftShootPrefab, LeftShoot.position, Quaternion.identity);
