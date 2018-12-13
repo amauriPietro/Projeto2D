@@ -11721,7 +11721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -141}
+  m_AnchoredPosition: {x: 8, y: -140.99997}
   m_SizeDelta: {x: 181, y: 66.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499230110
@@ -12511,6 +12511,7 @@ GameObject:
   - component: {fileID: 1638538723}
   - component: {fileID: 1638538725}
   - component: {fileID: 1638538724}
+  - component: {fileID: 1638538726}
   m_Layer: 5
   m_Name: LevelCompleteStarPanel
   m_TagString: Untagged
@@ -12577,6 +12578,30 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1638538722}
+--- !u!114 &1638538726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638538722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823a5b3af959f15429bf4279d30ea225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btNext: {fileID: 941190703}
+  goldenStar: {fileID: 21300000, guid: c337ef8dd5a7dfd43a305b7f636fae82, type: 3}
+  Star1: {fileID: 526357173}
+  Star2: {fileID: 390391961}
+  Star3: {fileID: 454645689}
+  txtScore: {fileID: 1499230110}
+  score: 35
+  ScoreForOneStar: 10
+  ScoreForTwoStars: 20
+  ScoreForThreeStars: 30
+  ScoreForNextLevel: 20
+  animStartDelay: 0.7
+  animDelay: 0.5
 --- !u!1001 &1660647962
 Prefab:
   m_ObjectHideFlags: 0
