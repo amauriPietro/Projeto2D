@@ -42,7 +42,8 @@ public class LevelCompleteCtrl : MonoBehaviour {
 			}
 		}
 		if(score >= ScoreForNextLevel){
-
+			btNext.interactable = true;
+			Plim(btNext.gameObject);
 		}
 	}
 	void ExecutarAnimacao(Image starImg){
@@ -50,8 +51,11 @@ public class LevelCompleteCtrl : MonoBehaviour {
 		starImg.sprite = goldenStar;
 		RectTransform t = starImg.rectTransform;
 		t.DOSizeDelta(new Vector2(100f, 100f), 0.5f);
+		Plim(starImg.gameObject);
 	}
-	
-	// Update is called once per frame
+	void Plim(GameObject obj){
+		SFXManager.instance.ShowStarParticle(obj);
+		AudioManager.instance.PlayStarSound(obj);
+	}
 
 }

@@ -9409,6 +9409,8 @@ MonoBehaviour:
     type: 2}
   KillParticle: {fileID: 1761646232786398, guid: 830ff0fcb9665c84ba3e77276a1c8397,
     type: 2}
+  StarParticle: {fileID: 1761646232786398, guid: 9a42041e8aa465d48b694e84845d013d,
+    type: 2}
 --- !u!1001 &675374491
 Prefab:
   m_ObjectHideFlags: 0

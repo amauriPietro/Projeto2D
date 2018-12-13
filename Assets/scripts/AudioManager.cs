@@ -40,4 +40,9 @@ public class AudioManager : MonoBehaviour {
         Vector3 vet = new Vector3(obj.transform.position.x, obj.transform.position.y, 0);
         AudioSource.PlayClipAtPoint(audioSFX.star, vet);
     }
+    public void PlayLevelCompleteSound(GameObject obj)
+    {
+        Vector3 vet = new Vector3(obj.transform.position.x, obj.transform.position.y, 0);
+        AudioSource.PlayClipAtPoint(audioSFX.LevelComplete, vet);
+    }
 }
