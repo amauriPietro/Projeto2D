@@ -27,11 +27,13 @@ public class UI {
     public GameOver gameOver;
     [Serializable]
     public class LevelComplete {
-        [Header("Text")]
+        /*[Header("Text")]
         public Text txtCoinCount;
         public Text txtTimer;
         [Header("Others")]
         public GameObject levelCompletePanel;
+        */
+        public GameObject levelCompleteStarPanel;
     }
     public LevelComplete levelComplete;
 }

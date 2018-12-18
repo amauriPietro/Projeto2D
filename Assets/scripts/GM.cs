@@ -129,9 +129,10 @@ public class GM : MonoBehaviour {
 	public void LevelComplete(){
 		Destroy(player.gameObject);
 		timerOn = false;
-		ui.levelComplete.txtCoinCount.text = "X " + data.coinCount;
-		ui.levelComplete.txtTimer.text = "Timer: " + timeLeft.ToString("F1");
-		ui.levelComplete.levelCompletePanel.SetActive(true);
+        ui.levelComplete.levelCompleteStarPanel.SetActive(true);
+		//ui.levelComplete.txtCoinCount.text = "X " + data.coinCount;
+		//ui.levelComplete.txtTimer.text = "Timer: " + timeLeft.ToString("F1");
+		//ui.levelComplete.levelCompletePanel.SetActive(true);
 	}
     IEnumerator MuteMusic(bool value, float delay)
     {

@@ -11186,9 +11186,7 @@ MonoBehaviour:
       txtTimer: {fileID: 1493291329}
       gameOverPanel: {fileID: 2131924132}
     levelComplete:
-      txtCoinCount: {fileID: 1660914816}
-      txtTimer: {fileID: 1523857280}
-      levelCompletePanel: {fileID: 1387812971}
+      levelCompleteStarPanel: {fileID: 1638538722}
   timeToKill: 1.5
 --- !u!4 &1338550070
 Transform:
@@ -12522,7 +12520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1638538723
 RectTransform:
   m_ObjectHideFlags: 0
