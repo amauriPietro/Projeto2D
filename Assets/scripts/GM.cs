@@ -114,6 +114,11 @@ public class GM : MonoBehaviour {
             }
         }
     }
+
+    public int Score()
+    {
+        return data.coinCount;
+    }
     public void ExpirePlayer(){
 		if(player != null){
 			Destroy(player.gameObject);
@@ -129,6 +134,7 @@ public class GM : MonoBehaviour {
 	public void LevelComplete(){
 		Destroy(player.gameObject);
 		timerOn = false;
+	    StartCoroutine(MuteMusic(true, 0f));
         ui.levelComplete.levelCompleteStarPanel.SetActive(true);
 		//ui.levelComplete.txtCoinCount.text = "X " + data.coinCount;
 		//ui.levelComplete.txtTimer.text = "Timer: " + timeLeft.ToString("F1");
