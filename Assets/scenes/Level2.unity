@@ -14244,6 +14244,7 @@ GameObject:
   - component: {fileID: 565093598}
   - component: {fileID: 565093597}
   - component: {fileID: 565093596}
+  - component: {fileID: 565093599}
   m_Layer: 5
   m_Name: LevelCompleteStarPanel
   m_TagString: Untagged
@@ -14334,6 +14335,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565093594}
+--- !u!114 &565093599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 565093594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d472bcde5f558b146a8f398c80e1e19b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &573034678
 GameObject:
   m_ObjectHideFlags: 0
@@ -15933,7 +15945,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1120801196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 565093599}
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level2
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1120801196
@@ -16225,7 +16248,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1261403374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 565093599}
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level3
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1261403374
@@ -16558,6 +16592,7 @@ GameObject:
   - component: {fileID: 1387812972}
   - component: {fileID: 1387812974}
   - component: {fileID: 1387812973}
+  - component: {fileID: 1387812975}
   m_Layer: 5
   m_Name: LevelCompletePanel
   m_TagString: Untagged
@@ -16623,6 +16658,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1387812971}
+--- !u!114 &1387812975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387812971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d472bcde5f558b146a8f398c80e1e19b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1398339088
 GameObject:
   m_ObjectHideFlags: 0
